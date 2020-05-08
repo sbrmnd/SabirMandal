@@ -1,0 +1,142 @@
+OOPs Concepts
+---------------
+What is Object Oriented Programming?
+What are main features of OOP?
+Encapsution, Abstruction, Inheritance and Polymorphism
+What is Polymorphism? How is it supported by C++?
+What are VTABLE and VPTR?
+Difference between Copy constructor and Assignment Operator overloading.
+Virtual Destruction.
+Differences between malloc() and operator new.
+What is Static Member?
+Casting Dynamic_cast, static_cast, and reint, const_cast
+
+Programing questions:
+
+--------------------------------------------------
+Finding the Sum of all Odd Frequency Elements in an Array
+
+For example, 
+Consider an array arr = {1, 2, 4, 5, 6, 3, 1, 2, 3, 3}
+Here, elements 1 and 2 repeats twice (even), whereas elements 4, 5, 6 are present only once (odd) and element 3 occurs thrice (odd). Hence,
+
+Elements having odd frequency : {4, 5, 6, 3, 3, 3}
+Sum of elements having odd frequency: 24
+
+Link list
+
+Inserting element in the end.
+Reverse the link list.
+Implement Stack.
+-----------------------
+
+Given an array of distinct integers. The task is to count all the triplets such that sum of two elements equals the third element.
+
+4
+1 5 3 2
+
+3
+3 2 7
+
+Output:
+2
+-1
+
+Explanation:
+Testcase 1: There are 2 triplets: 1 + 2 = 3 and 3 +2 = 5
+
+static private int SumOftriplets(int size, int[] array)
+    {
+        List<int> list = new List<int>(array);
+        int count = 0;
+        
+        for(int i =0; i< size; i++)
+        {
+            for(int j= 0; j< size; j++)
+            {
+                if(array[i]!=array[j])
+                {
+                    int sum = a[i]+a[j];
+                    if(list.Contains(sum))
+                    {
+                        count++;
+                    }
+                }
+            }
+        }
+    }
+
+
+---------------------------------------------------------
+
+MFC questions.
+--------------
+What is windows programming? How it’s working?
+What are class involved while creating MFC Application.
+CWinApp, CFrameWnd
+How Message Map works in an MFC application?
+
+Q What’s the difference between PostMessage and SendMessage?
+
+The PostMessage function places (posts) a message in the message queue associated with
+the thread that created the specified window and then returns without waiting for the
+thread to process the message.
+The SendMessage function sends the specified message to a window or windows. The
+function calls the window procedure for the specified window and does not return until the
+window procedure has processed the message.
+
+Q Name the Synchronization objects ?
+________________________________________
+Following are the synchronization objects
+1) Critical Section 2) Event 3) Mutex 4) Semaphore
+Classes provided for above synchronization objects are:
+1) CCriticalSection 2) CEvent 3) CMutex 4) CSemaphore
+
+Q What is the difference between regular dlls and extended dlls?
+
+Regular dlls wraps only the c/c++ functions. Where extention dlls include c++ interfaces
+where we can create the objects of it and use in our classes. Extended dlls support object
+oriented concepts.Regural dlls uses mfc internally and exported functions can be used by
+any mfc or non-mfc applications.Extention dlls implements reusable classes derived from
+mfc library,built using dll version of mfc.Only mfc executables(applications/dll-shared
+version of mfc) can use extention dlls.extention dlls used for passing mfc derived objects
+b/w applications and dlls. Regulardlls
+
+Q Can you explain the Document-View architecture in MFC ?
+
+Q Create a UI Threads.
+
+SQL questions.
+------------------
+What is unique key constraint.
+What is diffence between primary key costraint and unique key constraint?
+What are joins in SQL?
+Diffence between cluster and non-cluster index.
+Store procedure? can store procedure parameter 
+
+Write a SQL query to get the third highest salary of an employee from employee_table?
+
+SELECT TOP 1 salary
+FROM(
+SELECT TOP 3 salary
+FROM employee_table
+ORDER BY salary DESC) AS emp
+ORDER BY salary ASC;
+
+SELECT Salary
+FROM Worker W1
+WHERE 4 = (
+ SELECT COUNT( DISTINCT ( W2.Salary ) )
+ FROM Worker W2
+ WHERE W2.Salary >= W1.Salary
+ );
+
+Delete duplicate row in SQL
+
+What is the difference between DELETE and TRUNCATE statements?
+
+
+
+
+
+
